@@ -1,9 +1,9 @@
 root = true
 
 [*]
-charset = utf-8
-indent_style = space
-indent_size = 2
-end_of_line = lf
-insert_final_newline = true
-trim_trailing_whitespace = true
+charset = utf-8                     # supported values: latin1, utf-8, utf-16be, utf-16le   字符串编码格式
+indent_style = space                # supported values: space, tab  缩进方式
+indent_size = 4                     # supported values: [Number] 缩进大小
+end_of_line = lf                    # supported values: lf, crlf
+insert_final_newline = true         # supported valuess: [Boolean]  是否在最后一行新增空行
+trim_trailing_whitespace = true     # supported valuess: [Boolean]  是否删除行末空格
