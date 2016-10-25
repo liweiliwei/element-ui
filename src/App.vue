@@ -1,23 +1,19 @@
 <template>
   <div id="app">
-    <top></top>
-    <middle></middle>
-    <bottom></bottom>
+    <headerWrapper></headerWrapper>
+    <!-- 路由匹配到的组件将渲染在这里 -->
+    <router-view></router-view>
+    <footerWrapper></footerWrapper>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
-import Element from 'element-ui'  // UI
-Vue.use(Element) // 注册UI
-
-import top from './components/top'
-import middle from './components/middle'
-import bottom from './components/bottom'
+import headerWrapper from 'components/headerWrapper'
+import footerWrapper from 'components/footerWrapper'
 
 export default {
   components: {
-    top, middle, bottom
+    headerWrapper, footerWrapper
   },
   data () {
     return {

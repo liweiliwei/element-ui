@@ -1,6 +1,6 @@
 <template>
-  <div class="main">
-    <h1 @click="datetime2($event)">11{{datetime}}</h1>
+  <div class="footer">
+      22222222222222222
   </div>
 </template>
 <script>
@@ -23,3 +23,9 @@ export default {
   }
 }
 </script>
+<style scoped lang="less">
+@red:#ccc;
+h1{
+  color: @red
+}
+</style>
