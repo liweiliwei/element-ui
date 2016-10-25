@@ -40,11 +40,11 @@
         <el-input type="textarea" v-model="form.desc"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="onSubmit">立即创建</el-button>
+        <el-button type="primary" @click.native="onSubmit()">立即创建</el-button>
         <el-button @click.native.prevent>取消</el-button>
       </el-form-item>
     </el-form>
-    <button class="primary" @click="onSubmit">立即创建</button>
+
   </div>
 </template>
 <style lang="less">
@@ -72,7 +72,8 @@ export default {
   },
   methods: {
     onSubmit: function () {
-      console.log(this.form)
+      let json = JSON.stringify(this.form)
+      console.log(json)
       // console.log(this.form)
     }
   }
