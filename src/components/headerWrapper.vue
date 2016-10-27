@@ -1,14 +1,15 @@
 <template>
   <div class="headerWrapper">
-    <el-menu default-active="1" class="el-menu-demo" mode="horizontal">
+    <el-menu default-active="2" theme="dark" class="el-menu-demo" mode="horizontal">
       <div class="centerBox clearfix">
         <router-link to="/home"><el-menu-item index="1">首页</el-menu-item></router-link>
-        <router-link to="/pageA"><el-menu-item index="3">订单管理</el-menu-item></router-link>
-        <el-submenu index="2" class="right">
+        <router-link to="/formA"><el-menu-item index="2">表单测试</el-menu-item></router-link>
+        <router-link to="/tableA"><el-menu-item index="3">表格测试</el-menu-item></router-link>
+        <el-submenu index="4" class="right">
           <template slot="title">我的工作台</template>
-          <el-menu-item index="2-1">选项1</el-menu-item>
-          <el-menu-item index="2-2">选项2</el-menu-item>
-          <el-menu-item index="2-3">选项3</el-menu-item>
+          <el-menu-item index="4-1">选项1</el-menu-item>
+          <el-menu-item index="4-2">选项2</el-menu-item>
+          <el-menu-item index="4-3">选项3</el-menu-item>
         </el-submenu>
       </div>
     </el-menu>
@@ -16,10 +17,22 @@
 </template>
 
 <script>
+import { setTitle } from '../vuex/actions'
 export default {
   data () {
     return {
-      // menu: ['处理中心', '订单管理', '我的工作台', '个人中心']
+      numss: '2'
+    }
+  },
+  vuex: {
+    // 获取vuex状态数据
+    getters: {
+      title: state => state.title,
+      info: ({index}) => index.info
+    },
+    // 状态变更事件
+    actions: {
+      setTitle
     }
   }
 }

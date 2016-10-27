@@ -10,10 +10,12 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 // 组件
-import pageA from 'components/pageA.vue'
+import formA from 'components/formA.vue'
+import tableA from 'components/tableA.vue'
 const routes = [
   { path: '/home', component: app },
-  { path: '/pageA', component: pageA }
+  { path: '/formA', component: formA },
+  { path: '/tableA', component: tableA }
 ]
 const router = new VueRouter({
   routes
